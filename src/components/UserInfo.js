@@ -1,7 +1,7 @@
 import React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 
-const UserInfo = () => {
+const UserInfo = (props) => {
   return (
     <View style={styles.container}>
       <View style={styles.content}>
@@ -14,8 +14,9 @@ const UserInfo = () => {
             <Text style={styles.cpf}>***.233.445-**</Text>
           </View>
         </View>
-
-        <Text style={styles.text}>Trocar</Text>
+        <TouchableOpacity onPress={props.function}>
+          <Text style={styles.text}>Trocar</Text>
+        </TouchableOpacity>
       </View>
     </View>
   );
