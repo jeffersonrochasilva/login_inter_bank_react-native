@@ -11,7 +11,7 @@ const ForgotPassword = () => {
 
 const styles = StyleSheet.create({
   container: {
-    width: 300,
+    width: 330,
     alignItems: "center",
     marginTop: 30,
   },
