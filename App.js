@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import "react-native-gesture-handler";
 import { StatusBar } from "expo-status-bar";
 import { SafeAreaView, StyleSheet, Text, View } from "react-native";
@@ -12,17 +13,26 @@ import Icon from "./src/components/commom/Icon";
 import Footer from "./src/components/Footer";
 
 export default function App() {
+  const [typeInput, setTypeInput] = useState(true);
+  function setTypeInputInPage() {
+    setTypeInput(!typeInput);
+  }
   return (
     <View style={styles.container}>
       <View style={styles.header}>
         <Icon />
         <Title />
       </View>
-
       <View style={styles.content}>
-        <UserInfo />
-        <Input />
-        <Button />
+        <UserInfo init="JS" name="Jefferson Rocha" cpf="***.223.445-**" />
+        <Input
+          title="Senha"
+          password={typeInput}
+          placeholder={"Digite sua senha"}
+          type="text"
+          function={setTypeInputInPage}
+        />
+        <Button title="Entrar" />
         <ForgotPassword />
       </View>
       <Footer />

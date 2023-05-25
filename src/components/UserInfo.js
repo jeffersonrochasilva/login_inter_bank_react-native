@@ -1,21 +1,25 @@
 import React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 
-const UserInfo = () => {
+const UserInfo = (props) => {
+  function toChange() {
+    alert("modou");
+  }
   return (
     <View style={styles.container}>
       <View style={styles.content}>
         <View style={styles.subContainer}>
           <View style={styles.init}>
-            <Text style={styles.p}>JR</Text>
+            <Text style={styles.p}>{props.init}</Text>
           </View>
           <View style={styles.info}>
-            <Text style={styles.name}>Jefferson Rocha</Text>
-            <Text style={styles.cpf}>***.233.445-**</Text>
+            <Text style={styles.name}>{props.name}</Text>
+            <Text style={styles.cpf}>{props.cpf}</Text>
           </View>
         </View>
-
-        <Text style={styles.text}>Trocar</Text>
+        <TouchableOpacity onPress={toChange}>
+          <Text style={styles.text}>Trocar</Text>
+        </TouchableOpacity>
       </View>
     </View>
   );
@@ -30,7 +34,7 @@ const styles = StyleSheet.create({
   content: {
     borderWidth: 1,
     borderColor: "#cdcdcd",
-    width: 300,
+    width: 330,
     height: 60,
     justifyContent: "space-between",
     alignItems: "center",
@@ -66,7 +70,7 @@ const styles = StyleSheet.create({
   p: {
     color: "#fff",
     fontWeight: "bold",
-    fontSize: 24,
+    fontSize: 20,
   },
 });
 

@@ -4,7 +4,7 @@ import { AntDesign } from "@expo/vector-icons";
 const Title = () => {
   return (
     <View style={styles.container}>
-      <AntDesign name="questioncircleo" size={24} color="#E6750B" />
+      <AntDesign name="questioncircleo" size={20} color="#E6750B" />
     </View>
   );
 };
@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
     height: 60,
     justifyContent: "center",
     alignItems: "flex-end",
-    paddingRight: 10,
+    paddingRight: 12,
   },
 });
 export default Title;
