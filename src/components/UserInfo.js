@@ -40,15 +40,16 @@ const styles = StyleSheet.create({
   },
   subContainer: {
     flexDirection: "row",
+    alignItems: "center",
   },
   info: {
     marginLeft: 10,
   },
   init: {
-    width: 45,
-    height: 45,
+    width: 35,
+    height: 35,
     borderRadius: 100,
-    backgroundColor: "#c3c3c3",
+    backgroundColor: "rgb(109, 108, 108)",
     justifyContent: "center",
     alignItems: "center",
   },
