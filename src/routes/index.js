@@ -4,7 +4,6 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 import Home from "../views/Home";
 import Acounts from "../views/Acounts";
-import TelaC from "../views/TelaC";
 
 const Stack = createNativeStackNavigator();
 

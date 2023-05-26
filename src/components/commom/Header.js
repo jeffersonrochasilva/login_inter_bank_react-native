@@ -5,7 +5,7 @@ const Header = (props) => {
   return (
     <View style={styles.container}>
       <View style={styles.content}>
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity onPress={props.function} style={styles.button}>
           <AntDesign name="arrowleft" size={24} color="#E6750B" />
         </TouchableOpacity>
         <Text style={styles.text}>Conta</Text>

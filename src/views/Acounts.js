@@ -5,19 +5,35 @@ import Header from "../components/commom/Header";
 import Button from "../components/commom/Button";
 import UserInfo from "../components/UserInfo";
 
-function Home({ navigation }) {
+function Acounts({ navigation }) {
   function goTo() {
-    navigation.navigate("Acount");
+    navigation.navigate("Home");
   }
   return (
     <View style={styles.container}>
-      <Header />
+      <Header function={goTo} />
       <View style={styles.content}>
-        <UserInfo function={goTo} />
+        <UserInfo
+          function={goTo}
+          cpf="***.115.558-**"
+          init="JS"
+          name="Jefferson Rocha"
+        />
       </View>
       <View style={styles.button}>
-        <Button title="Entrar comoutra conta" />
-        <Button title="Abrir conta completa e gratuita" />
+        <Button
+          title="Entrar comoutra conta"
+          color="#E6750B"
+          colorBorder="#E6750B"
+          aling="flex-start"
+          size={1}
+        />
+        <Button
+          title="Abrir conta completa e gratuita"
+          background="#E6750B"
+          color="#fff"
+          aling="flex-start"
+        />
       </View>
     </View>
   );
@@ -39,4 +55,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Home;
+export default Acounts;

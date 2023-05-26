@@ -17,6 +17,7 @@ const UserInfo = (props) => {
             <Text style={styles.cpf}>{props.cpf}</Text>
           </View>
         </View>
+        <TouchableOpacity onPress={props.function}>
           <Text style={styles.text}>Trocar</Text>
         </TouchableOpacity>
       </View>
