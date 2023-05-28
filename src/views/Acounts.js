@@ -18,6 +18,7 @@ function Acounts({ navigation }) {
           cpf="***.115.558-**"
           init="JS"
           name="Jefferson Rocha"
+          step={true}
         />
       </View>
       <View style={styles.button}>

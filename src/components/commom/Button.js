@@ -7,7 +7,7 @@ const Button = (props) => {
   };
   return (
     <TouchableOpacity
-      onPress={click}
+      onPress={props.function}
       style={{
         width: 330,
         height: 40,

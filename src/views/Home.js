@@ -8,19 +8,24 @@ import ForgotPassword from "../components/ForgotPassword";
 import Input from "../components/commom/Input";
 import Icon from "../components/commom/Icon";
 import Footer from "../components/Footer";
+import ModalComponent from "../components/commom/ModalComponent";
 
 function Home({ navigation }) {
   const [password, setPassword] = useState(true);
+  const [stateModal, setStateModal] = useState(false);
   function goTo() {
     navigation.navigate("Acounts");
   }
   function setStatePassword() {
     setPassword(!password);
   }
+  function setValueStateModal() {
+    setStateModal(!stateModal);
+  }
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        <Icon />
+        <Icon function={setValueStateModal} />
         <Title />
       </View>
       <View style={styles.content}>
@@ -44,7 +49,16 @@ function Home({ navigation }) {
         />
         <ForgotPassword />
       </View>
-      <Footer />
+      <Footer function={goTo} />
+      {stateModal ? (
+        <ModalComponent
+          coverScreen={true}
+          step={stateModal}
+          function={setValueStateModal}
+        />
+      ) : (
+        false
+      )}
     </View>
   );
 }

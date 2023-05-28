@@ -1,10 +1,12 @@
 import React from "react";
-import { Text, View, StyleSheet } from "react-native";
+import { Text, View, StyleSheet, TouchableOpacity } from "react-native";
 import { AntDesign } from "@expo/vector-icons";
-const Title = () => {
+const Title = (props) => {
   return (
     <View style={styles.container}>
-      <AntDesign name="questioncircleo" size={20} color="#E6750B" />
+      <TouchableOpacity onPress={props.function}>
+        <AntDesign name="questioncircleo" size={20} color="#E6750B" />
+      </TouchableOpacity>
     </View>
   );
 };

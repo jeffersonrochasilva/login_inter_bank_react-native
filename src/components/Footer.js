@@ -1,7 +1,7 @@
 import React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 import { Entypo } from "@expo/vector-icons";
-const Footer = () => {
+const Footer = (props) => {
   return (
     <View style={styles.container}>
       <View style={styles.content}>
@@ -9,8 +9,9 @@ const Footer = () => {
           <Entypo name="lock-open" size={16} color="#E6750B" />
           <Text style={styles.text}>ISafe</Text>
         </View>
-
-        <Text style={styles.text}>Trocar ou abrir conta</Text>
+        <TouchableOpacity onPress={props.function}>
+          <Text style={styles.text}>Trocar ou abrir conta</Text>
+        </TouchableOpacity>
       </View>
     </View>
   );

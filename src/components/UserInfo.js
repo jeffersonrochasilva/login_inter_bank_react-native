@@ -1,5 +1,6 @@
 import React from "react";
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
+import { Feather } from "@expo/vector-icons";
 
 const UserInfo = (props) => {
   function toChange() {
@@ -18,7 +19,11 @@ const UserInfo = (props) => {
           </View>
         </View>
         <TouchableOpacity onPress={props.function}>
-          <Text style={styles.text}>Trocar</Text>
+          {props.step ? (
+            <Feather name="trash" size={20} color="#E6750B" />
+          ) : (
+            <Text style={styles.text}>Trocar</Text>
+          )}
         </TouchableOpacity>
       </View>
     </View>
