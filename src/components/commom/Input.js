@@ -9,16 +9,14 @@ import {
 
 import { Entypo } from "@expo/vector-icons";
 const Input = (props) => {
-  const [num, setNum] = useState("");
-
   return (
     <View style={styles.container}>
       <View style={styles.content}>
         <Text style={styles.text}>{props.title}</Text>
         <TextInput
-          value={num}
+          value={props.value}
           secureTextEntry={props.password}
-          onChangeText={(value) => setNum(value)}
+          onChangeText={(value) => props.setValue(value)}
           style={styles.input}
           placeholder={props.placeholder}
           keyboardType={props.type}

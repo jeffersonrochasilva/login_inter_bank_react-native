@@ -7,7 +7,7 @@ import UserInfo from "../components/UserInfo";
 
 function Acounts({ navigation }) {
   function goTo() {
-    navigation.navigate("Home");
+    navigation.navigate("Login");
   }
   return (
     <View style={styles.container}>
