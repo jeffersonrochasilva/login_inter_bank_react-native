@@ -22,6 +22,10 @@ function Login({ navigation }) {
     if (num == users[0].password) {
       console.warn("parabéns! vocÊ está logado");
       console.log(users);
+      navigation.navigate("Loading");
+      setTimeout(() => {
+        navigation.navigate("Home");
+      }, 2000);
     } else {
       console.log(users[0].name);
 
