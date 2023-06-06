@@ -35,7 +35,6 @@ const styles = StyleSheet.create({
     width: "100%",
     alignItems: "flex-start",
     marginTop: 20,
-    marginLeft: 16,
   },
   content: {
     width: 190,
