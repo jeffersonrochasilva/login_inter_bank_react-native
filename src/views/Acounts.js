@@ -1,6 +1,7 @@
 import * as React from "react";
 import { View, StyleSheet } from "react-native";
 
+// Components
 import Header from "../components/commom/Header";
 import Button from "../components/commom/Button";
 import UserInfo from "../components/UserInfo";
