@@ -1,5 +1,11 @@
 import React from "react";
-import { View, Text, SafeAreaView, StyleSheet } from "react-native";
+import {
+  View,
+  Text,
+  SafeAreaView,
+  StyleSheet,
+  TouchableOpacity,
+} from "react-native";
 
 // icons
 import { AntDesign } from "@expo/vector-icons";
@@ -7,12 +13,14 @@ import { MaterialIcons } from "@expo/vector-icons";
 
 const Card = (props) => {
   return (
-    <View style={styles.container}>
-      {props.icons && (
-        <AntDesign name={props.icons} size={24} color="#E6750B" />
-      )}
-      <Text>{props.text}</Text>
-    </View>
+    <TouchableOpacity onPress={props.function}>
+      <View style={styles.container}>
+        {props.icons && (
+          <AntDesign name={props.icons} size={24} color="#E6750B" />
+        )}
+        <Text>{props.text}</Text>
+      </View>
+    </TouchableOpacity>
   );
 };
 

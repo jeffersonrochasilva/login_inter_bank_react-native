@@ -1,10 +1,13 @@
 import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
+
+// Screms
 import Login from "../views/Login";
 import Acounts from "../views/Acounts";
 import Home from "../views/Home";
 import Loading from "../views/Loading";
+import CardScreen from "../views/CardScreen";
 
 const Stack = createNativeStackNavigator();
 
@@ -30,6 +33,11 @@ const AppContainer = () => {
         <Stack.Screen
           name="Acounts"
           component={Acounts}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="CardScreen"
+          component={CardScreen}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>

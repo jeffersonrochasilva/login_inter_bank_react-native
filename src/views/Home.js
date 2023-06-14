@@ -16,13 +16,17 @@ import Card from "../components/commom/Card";
 
 // Icons
 import { AntDesign } from "@expo/vector-icons";
+
 const Home = ({ navigation }) => {
   const [stepModalFgts, setStepModalFgts] = useState(true);
   function goto() {
     navigation.navigate("Login");
   }
+  function goToCardScreen() {
+    navigation.navigate("CardScreen");
+  }
   function setValueStep() {
-    setStepModalFgts(false);
+    setStepModalFgts(!stepModalFgts);
   }
   return (
     <SafeAreaView style={styles.home}>
@@ -32,22 +36,25 @@ const Home = ({ navigation }) => {
           <AcountBalance />
           <Text style={styles.text}>Ver extrato</Text>
           <View style={styles.content}>
-            <Card icons="creditcard" text="Cartões" />
+            <Card icons="creditcard" text="Cartões" function={goToCardScreen} />
             <Card icons="barschart" text="Invest" />
             <Card icons="areachart" text="calc" />
             <Card icons="home" text="inicio" />
             <Card icons="phone" text="Contato" />
             <Card icons="setting" text="configuração" />
           </View>
-          <AntDesign
-            style={{ textAlign: "center" }}
-            name="down"
-            size={30}
-            color="#E6750B"
-          />
+          <TouchableOpacity onPress={setValueStep}>
+            <AntDesign
+              style={{ textAlign: "center" }}
+              name="down"
+              size={30}
+              color="#E6750B"
+            />
+          </TouchableOpacity>
+
           {stepModalFgts && (
             <View>
-              <TouchableOpacity>
+              <TouchableOpacity onPress={setValueStep}>
                 <AntDesign
                   style={{ textAlign: "right" }}
                   name="close"
