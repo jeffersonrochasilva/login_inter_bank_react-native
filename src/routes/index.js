@@ -8,7 +8,7 @@ import Acounts from "../views/Acounts";
 import Home from "../views/Home";
 import Loading from "../views/Loading";
 import CardScreen from "../views/CardScreen";
-
+import Invest from "../views/Invest";
 const Stack = createNativeStackNavigator();
 
 const AppContainer = () => {
@@ -28,6 +28,11 @@ const AppContainer = () => {
         <Stack.Screen
           name="Home"
           component={Home}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Invest"
+          component={Invest}
           options={{ headerShown: false }}
         />
         <Stack.Screen

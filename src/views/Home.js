@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+
 import {
   View,
   Text,
@@ -25,6 +26,9 @@ const Home = ({ navigation }) => {
   function goToCardScreen() {
     navigation.navigate("CardScreen");
   }
+  function goToInvest() {
+    navigation.navigate("Invest");
+  }
   function setValueStep() {
     setStepModalFgts(!stepModalFgts);
   }
@@ -37,7 +41,7 @@ const Home = ({ navigation }) => {
           <Text style={styles.text}>Ver extrato</Text>
           <View style={styles.content}>
             <Card icons="creditcard" text="Cartões" function={goToCardScreen} />
-            <Card icons="barschart" text="Invest" />
+            <Card icons="barschart" text="Invest" function={goToInvest} />
             <Card icons="areachart" text="calc" />
             <Card icons="home" text="inicio" />
             <Card icons="phone" text="Contato" />
