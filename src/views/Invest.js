@@ -5,6 +5,8 @@ import { View, Text, StyleSheet } from "react-native";
 import Header from "../components/invest/Header";
 import CardDescription from "../components/invest/CardDescription";
 import Options from "../components/invest/Options";
+import Profile from "../components/invest/Profile";
+import GetInvest from "../components/invest/GetInvest";
 const Invest = ({ navigation }) => {
   function goBack() {
     navigation.navigate("Home");
@@ -14,6 +16,8 @@ const Invest = ({ navigation }) => {
       <Header function={goBack} />
       <CardDescription />
       <Options />
+      <Profile />
+      <GetInvest />
     </View>
   );
 };
