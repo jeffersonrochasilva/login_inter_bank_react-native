@@ -23,6 +23,9 @@ const Home = ({ navigation }) => {
   function goto() {
     navigation.navigate("Login");
   }
+  function goToPix() {
+    navigation.navigate("Pix");
+  }
   function goToCardScreen() {
     navigation.navigate("CardScreen");
   }
@@ -42,7 +45,7 @@ const Home = ({ navigation }) => {
           <View style={styles.content}>
             <Card icons="creditcard" text="Cartões" function={goToCardScreen} />
             <Card icons="barschart" text="Invest" function={goToInvest} />
-            <Card icons="areachart" text="calc" />
+            <Card icons="areachart" text="Pix" function={goToPix} />
             <Card icons="home" text="inicio" />
             <Card icons="phone" text="Contato" />
             <Card icons="setting" text="configuração" />

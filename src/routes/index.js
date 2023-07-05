@@ -9,6 +9,7 @@ import Home from "../views/Home";
 import Loading from "../views/Loading";
 import CardScreen from "../views/CardScreen";
 import Invest from "../views/Invest";
+import Pix from "../views/Pix";
 const Stack = createNativeStackNavigator();
 
 const AppContainer = () => {
@@ -33,6 +34,11 @@ const AppContainer = () => {
         <Stack.Screen
           name="Invest"
           component={Invest}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Pix"
+          component={Pix}
           options={{ headerShown: false }}
         />
         <Stack.Screen
