@@ -20,6 +20,14 @@ import { AntDesign } from "@expo/vector-icons";
 
 const Home = ({ navigation }) => {
   const [stepModalFgts, setStepModalFgts] = useState(true);
+  const [data] = useState([
+    { icons: "creditcard", text: "Cartões", function: goToCardScreen },
+    { icons: "barschart", text: "Invest", function: goToInvest },
+    { icons: "areachart", text: "Pix", function: goToPix },
+    { icons: "home", text: "Contato", function: goToCardScreen },
+    { icons: "phone", text: "Contato", function: goToCardScreen },
+    { icons: "setting", text: "configuração", function: goToCardScreen },
+  ]);
   function goto() {
     navigation.navigate("Login");
   }
@@ -43,12 +51,14 @@ const Home = ({ navigation }) => {
           <AcountBalance />
           <Text style={styles.text}>Ver extrato</Text>
           <View style={styles.content}>
-            <Card icons="creditcard" text="Cartões" function={goToCardScreen} />
-            <Card icons="barschart" text="Invest" function={goToInvest} />
-            <Card icons="areachart" text="Pix" function={goToPix} />
-            <Card icons="home" text="inicio" />
-            <Card icons="phone" text="Contato" />
-            <Card icons="setting" text="configuração" />
+            {data.map((item, index) => (
+              <Card
+                key={index}
+                icons={item.icons}
+                text={item.text}
+                function={item.function}
+              />
+            ))}
           </View>
           <TouchableOpacity onPress={setValueStep}>
             <AntDesign
@@ -58,7 +68,6 @@ const Home = ({ navigation }) => {
               color="#E6750B"
             />
           </TouchableOpacity>
-
           {stepModalFgts && (
             <View>
               <TouchableOpacity onPress={setValueStep}>
