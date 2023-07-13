@@ -20,7 +20,6 @@ function Login({ navigation }) {
 
   function login() {
     if (num == users[0].password) {
-      console.warn("parabéns! vocÊ está logado");
       console.log(users);
       navigation.navigate("Loading");
       setTimeout(() => {
@@ -28,7 +27,6 @@ function Login({ navigation }) {
       }, 2000);
     } else {
       console.log(users[0].name);
-
       console.warn(`senha ${users[0].password} incorreto`);
     }
   }
