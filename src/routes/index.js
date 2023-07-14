@@ -10,6 +10,8 @@ import Loading from "../views/Loading";
 import CardScreen from "../views/CardScreen";
 import Invest from "../views/Invest";
 import Pix from "../views/Pix";
+import Contact from "../views/Contact";
+
 const Stack = createNativeStackNavigator();
 
 const AppContainer = () => {
@@ -39,6 +41,11 @@ const AppContainer = () => {
         <Stack.Screen
           name="Pix"
           component={Pix}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Contact"
+          component={Contact}
           options={{ headerShown: false }}
         />
         <Stack.Screen

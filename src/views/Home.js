@@ -24,8 +24,8 @@ const Home = ({ navigation }) => {
     { icons: "creditcard", text: "Cartões", function: goToCardScreen },
     { icons: "barschart", text: "Invest", function: goToInvest },
     { icons: "areachart", text: "Pix", function: goToPix },
-    { icons: "home", text: "Contato", function: goToCardScreen },
-    { icons: "phone", text: "Contato", function: goToCardScreen },
+    { icons: "home", text: "Contato", function: goToContact },
+    { icons: "phone", text: "Contato", function: goToContact },
     { icons: "setting", text: "configuração", function: goToCardScreen },
   ]);
   function goto() {
@@ -39,6 +39,9 @@ const Home = ({ navigation }) => {
   }
   function goToInvest() {
     navigation.navigate("Invest");
+  }
+  function goToContact() {
+    navigation.navigate("Contact");
   }
   function setValueStep() {
     setStepModalFgts(!stepModalFgts);
